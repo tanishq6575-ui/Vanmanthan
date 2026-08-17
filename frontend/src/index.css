@@ -1,0 +1,92 @@
+@import "leaflet/dist/leaflet.css";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background-color: #05150f;
+  color: #f5f2eb;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+/* Custom scrollbar for government forestry dashboard */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #030d09;
+}
+::-webkit-scrollbar-thumb {
+  background: #143d2c;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #10b981;
+}
+
+/* Leaflet Dark Forestry Map Styling */
+.leaflet-container {
+  background-color: #04100c !important;
+  font-family: inherit;
+  border-radius: 1rem;
+}
+
+.leaflet-popup-content-wrapper {
+  background: #071c14 !important;
+  color: #f5f2eb !important;
+  border: 1px solid #1b3d2f !important;
+  border-radius: 12px !important;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.7) !important;
+  font-size: 11px !important;
+}
+
+.leaflet-popup-tip {
+  background: #071c14 !important;
+  border: 1px solid #1b3d2f !important;
+}
+
+.leaflet-popup-close-button {
+  color: #9ca3af !important;
+}
+
+/* Pulse animation for active wildlife GPS pins */
+@keyframes marker-pulse {
+  0% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7);
+  }
+  70% {
+    transform: scale(1.15);
+    box-shadow: 0 0 0 10px rgba(16, 185, 129, 0);
+  }
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(16, 185, 129, 0);
+  }
+}
+
+@keyframes risk-pulse {
+  0% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.8);
+  }
+  70% {
+    transform: scale(1.2);
+    box-shadow: 0 0 0 14px rgba(239, 68, 68, 0);
+  }
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(239, 68, 68, 0);
+  }
+}
+
+.pulsing-tiger-pin {
+  animation: risk-pulse 2s infinite;
+}
+
+.pulsing-cam-pin {
+  animation: marker-pulse 2.5s infinite;
+}

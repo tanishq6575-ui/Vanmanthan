@@ -1,0 +1,47 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.pytest_cache/
+.venv/
+venv/
+env/
+
+# Environment / secrets
+.env
+.env.*
+!.env.example
+
+# Backend generated data
+backend/uploads/*
+backend/results/*
+backend/crops/*
+backend/.pytest_cache/
+
+# ML models
+*.pt
+*.pth
+*.onnx
+*.ckpt
+*.weights
+models/
+model_cache/
+
+# Frontend
+frontend/node_modules/
+frontend/dist/
+
+# IDE / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Local datasets
+data/
+
+# Local database
+wildlife_platform.db
