@@ -1,4 +1,5 @@
-PytorchWildlife==1.3.0soundfile
+PytorchWildlife==1.3.0
+soundfile
 librosa
 setuptools
 fastapi>=0.100.0
